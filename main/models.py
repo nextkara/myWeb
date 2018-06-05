@@ -9,4 +9,4 @@ class menu(models.Model):
 class user(models.Model):
     userName = models.CharField(max_length=200)
     userID = models.IntegerField()
-    userPassword = models.IntegerField(max_length=200)
+    userPassword = models.CharField(max_length=200)
