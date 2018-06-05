@@ -10,3 +10,4 @@ class user(models.Model):
     userName = models.CharField(max_length=200)
     userID = models.IntegerField()
     userPassword = models.CharField(max_length=200)
+    userGroup = models.CharField(max_length=200)
