@@ -2,27 +2,11 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>银汉游戏运维自助平台</title>
+    <title>银汉游戏运维自助平台--{{ name }}</title>
     <link rel="stylesheet" type="text/css" href="/static/css/styles.css"/>
 </head>
 <body>
-<div>
-<ul class="header">
-    <li class="header"><a class="header" href="/help/"><img height="40px" src="/static/img/tomato.svg"><span style="font: 28px bold"> 自助平台</span></a></li>
-</ul>
-</div>
-
-<div>
-    <div class="left">
-        <ul class="page">
-          <li class="page"><a class="page" href="/monitor/"><img src="/static/img/home.svg"> 控制台</a></li>
-          <li class="page"><a class="page" href="/worklist/"><img src="/static/img/task.svg"> 作业系统</a></li>
-          <li class="page"><a class="page  active" href="/upload/"><img src="/static/img/upload.svg" > 文件上传</a></li>
-          <li class="page"><a class="page" href="/download/"><img src="/static/img/download.svg" > 文件下载</a></li>
-          <li class="page"><a class="page" href="/help"><img src="/static/img/mail.svg"> 帮助页面</a></li>
-        </ul>
-    </div>
-</div>
+{% include 'index.html' %}
 <div class="right">
         <p><h1>文件上传～页面施工中</h1></p>
     </div>

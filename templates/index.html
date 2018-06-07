@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>银汉游戏运维自助平台</title>
+    <title>银汉游戏运维自助平台--{{ name }}</title>
     <link rel="stylesheet" type="text/css" href="/static/css/styles.css"/>
 </head>
 <body>
@@ -15,17 +15,16 @@
 <div>
     <div class="left">
         <ul class="page">
-          <li class="page"><a class="page active" href="/monitor/"><img src="/static/img/home.svg"> 控制台</a></li>
-          <li class="page"><a class="page" href="/worklist/"><img src="/static/img/task.svg"> 作业系统</a></li>
-          <li class="page"><a class="page" href="/upload/"><img src="/static/img/upload.svg" > 文件上传</a></li>
-          <li class="page"><a class="page" href="/download/"><img src="/static/img/download.svg" > 文件下载</a></li>
-          <li class="page"><a class="page" href="/help"><img src="/static/img/mail.svg"> 帮助页面</a></li>
+            {% for x in info_dict %}
+                {% if request.path == x.menu_link %}
+                  <li class="page"><a class="page active" href="{{ x.menu_link }}"><img src="{{ x.menu_img }}"> {{ x.menu_name }}</a></li>
+                {% else %}
+                  <li class="page"><a class="page" href="{{ x.menu_link }}"><img src="{{ x.menu_img }}"> {{ x.menu_name }}</a></li>
+                {% endif %}
+            {% endfor %}
         </ul>
     </div>
 </div>
-<div class="right">
-        <p style="height: 1000px;width: 1000px"><img src="/static/img/t.svg"></p>
-    </div>
 </body>
 </html>
 
