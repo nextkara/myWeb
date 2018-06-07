@@ -21,7 +21,7 @@ li.page a {
 li.page a.active {
     background-color: yellowgreen;
     color: white;
-    text-indent: 4px;
+    text-indent: 10px;
 }
 
 li.page a:hover:not(.active) {

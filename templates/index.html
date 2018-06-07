@@ -7,9 +7,10 @@
 </head>
 <body>
 <div>
-<ul class="header">
-    <li class="header"><a class="header" href="/help/"><img height="40px" src="/static/img/tomato.svg"><span style="font: 28px bold"> 自助平台</span></a></li>
-</ul>
+    <ul class="header">
+        <li class="header"><a class="header" href="/help/"><img height="40px" src="/static/img/tomato.svg"><span
+                style="font: 28px bold"> 自助平台</span></a></li>
+    </ul>
 </div>
 
 <div>
@@ -17,9 +18,11 @@
         <ul class="page">
             {% for x in info_dict %}
                 {% if request.path == x.menu_link %}
-                  <li class="page"><a class="page active" href="{{ x.menu_link }}"><img src="{{ x.menu_img }}"> {{ x.menu_name }}</a></li>
+                    <li class="page"><a class="page active" href="{{ x.menu_link }}"><img
+                            src="{{ x.menu_img }}"> {{ x.menu_name }}</a></li>
                 {% else %}
-                  <li class="page"><a class="page" href="{{ x.menu_link }}"><img src="{{ x.menu_img }}"> {{ x.menu_name }}</a></li>
+                    <li class="page"><a class="page" href="{{ x.menu_link }}"><img
+                            src="{{ x.menu_img }}"> {{ x.menu_name }}</a></li>
                 {% endif %}
             {% endfor %}
         </ul>
